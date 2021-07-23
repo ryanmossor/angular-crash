@@ -1,0 +1,10 @@
+<header>
+    <h1>{{ title }}</h1>
+    <!-- Can define attributes (e.g., color, text) specific to this iteration of the element -->
+    <!-- In the component's HTML file (button.component.html), need to specify these attributes -->
+    <!-- Also must include attributes using @Input in the component's TS file -->
+    <app-button *ngIf="hasRoute('/')" color="{{showAddTask ? 'red' : 'green'}}" text="{{showAddTask ? 'Close' : 'Add'}}"
+        (btnClick)="toggleAddTask()"></app-button>
+    <!-- btnClick is defined in button.component.ts -->
+    <!-- toggleAddTask is defined in header.component.ts -->
+</header>
